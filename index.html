@@ -1,0 +1,1830 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Boulangerie Les Artistes — Chevreul</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#080808;
+color:white;
+overflow-x:hidden;
+}
+
+/* ====================== */
+/* SCROLL */
+/* ====================== */
+
+::-webkit-scrollbar{
+width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+background:#d8a067;
+border-radius:20px;
+}
+
+/* ====================== */
+/* NAVBAR */
+/* ====================== */
+
+.navbar{
+padding:18px 0;
+background:rgba(0,0,0,0.7);
+backdrop-filter:blur(20px);
+border-bottom:1px solid rgba(255,255,255,0.06);
+}
+
+.navbar-brand{
+font-size:2rem;
+font-weight:900;
+color:#f5c28a !important;
+}
+
+.nav-link{
+color:white !important;
+margin-left:20px;
+font-weight:600;
+transition:0.3s;
+}
+
+.nav-link:hover{
+color:#f5c28a !important;
+}
+
+/* ====================== */
+/* HERO */
+/* ====================== */
+
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+position:relative;
+overflow:hidden;
+}
+
+.hero-slider{
+position:absolute;
+inset:0;
+z-index:-2;
+}
+
+.hero-slide{
+position:absolute;
+inset:0;
+background-size:cover;
+background-position:center;
+opacity:0;
+animation:slider 22s infinite;
+transform:scale(1.08);
+}
+
+.hero-slide:nth-child(1){
+background-image:url('https://lh3.googleusercontent.com/gps-cs-s/APNQkAExTr1kOBJB9JyBU5dsOQJGf-HOrsd7qgXi4atUWq2GQ49KrHI80HN6fVrg2YvGU1NPH4uIdbHWylfa_LdDI8acabxN57IAbEeJayWEmQVYIZp_D4Ulv4nXWpPlu_EAyHJcNZ9lxjkxYh4=s1360-w1360-h1020-rw');
+animation-delay:0s;
+}
+
+.hero-slide:nth-child(2){
+background-image:url('https://lh3.googleusercontent.com/p/AF1QipOYww7SqqGGx4sg-ArsUBRRcxrYV-tKyF5b5AI4=s1360-w1360-h1020-rw');
+animation-delay:7s;
+}
+
+.hero-slide:nth-child(3){
+background-image:url('https://lh3.googleusercontent.com/gps-cs-s/APNQkAEHBCc1807-kOMDCKWtFvxSUQ9D7LDyFKEK0_31PeVz7DyjFfVH5i3dDdY4P3AVLq8Cc2KuFsCyjSSsJKWNHWP9MbJHCPafw2FaDFmKj9-ZROS6J48Gl6pq2XtpChIJqG0J3t3iPE5QUfcI=s1360-w1360-h1020-rw');
+animation-delay:14s;
+}
+
+@keyframes slider{
+
+0%{
+opacity:0;
+transform:scale(1.1);
+}
+
+10%{
+opacity:1;
+}
+
+30%{
+opacity:1;
+}
+
+40%{
+opacity:0;
+transform:scale(1);
+}
+
+100%{
+opacity:0;
+}
+
+}
+
+.hero::after{
+content:'';
+position:absolute;
+inset:0;
+background:linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.78));
+z-index:-1;
+}
+
+.hero h1{
+font-size:6rem;
+font-weight:900;
+line-height:1;
+margin-bottom:25px;
+}
+
+.hero p{
+max-width:850px;
+margin:auto;
+font-size:1.15rem;
+line-height:2;
+color:#ececec;
+}
+
+.hero-buttons{
+margin-top:45px;
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.btn-gold{
+padding:18px 42px;
+border:none;
+border-radius:60px;
+font-weight:800;
+background:linear-gradient(135deg,#d8a067,#ffcf97);
+color:black;
+text-decoration:none;
+transition:0.4s;
+box-shadow:0 15px 40px rgba(216,160,103,0.35);
+}
+
+.btn-gold:hover{
+transform:translateY(-5px);
+color:black;
+}
+
+.btn-glass{
+padding:18px 42px;
+border-radius:60px;
+text-decoration:none;
+color:white;
+background:rgba(255,255,255,0.08);
+border:1px solid rgba(255,255,255,0.08);
+backdrop-filter:blur(18px);
+transition:0.4s;
+font-weight:700;
+}
+
+.btn-glass:hover{
+background:white;
+color:black;
+}
+
+/* ====================== */
+/* SECTION */
+/* ====================== */
+
+section{
+padding:120px 0;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:80px;
+}
+
+.section-title h2{
+font-size:4rem;
+font-weight:900;
+}
+
+.section-title p{
+margin-top:20px;
+color:#aaa;
+}
+
+/* ====================== */
+/* CARDS */
+/* ====================== */
+
+.card-lux{
+background:linear-gradient(145deg,#111,#171717);
+border-radius:35px;
+overflow:hidden;
+height:100%;
+transition:0.4s;
+border:1px solid rgba(255,255,255,0.06);
+}
+
+.card-lux:hover{
+transform:translateY(-10px);
+}
+
+.card-lux img{
+width:100%;
+height:320px;
+object-fit:cover;
+}
+
+.card-content{
+padding:35px;
+}
+
+.card-content h4{
+font-weight:800;
+margin-bottom:15px;
+}
+
+/* ====================== */
+/* GALLERY */
+/* ====================== */
+
+.gallery img{
+width:100%;
+height:340px;
+object-fit:cover;
+border-radius:30px;
+transition:0.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.03);
+}
+
+/* ====================== */
+/* REVIEWS */
+/* ====================== */
+
+.reviews-wrapper{
+overflow:hidden;
+position:relative;
+}
+
+.reviews-track{
+display:flex;
+gap:25px;
+width:max-content;
+animation:scrollReviews 45s linear infinite;
+}
+
+@keyframes scrollReviews{
+
+0%{
+transform:translateX(0);
+}
+
+100%{
+transform:translateX(-50%);
+}
+
+}
+
+.review-card{
+width:360px;
+background:#141414;
+padding:35px;
+border-radius:30px;
+border:1px solid rgba(255,255,255,0.06);
+}
+
+.review-card img{
+width:70px;
+height:70px;
+border-radius:50%;
+object-fit:cover;
+margin-bottom:20px;
+}
+
+.stars{
+color:#ffc96b;
+margin-bottom:18px;
+}
+
+/* ====================== */
+/* MAP */
+/* ====================== */
+
+.map-wrapper{
+background:linear-gradient(145deg,#111,#171717);
+padding:30px;
+border-radius:40px;
+}
+
+.map-box{
+overflow:hidden;
+border-radius:30px;
+}
+
+.hours-box{
+background:#141414;
+padding:35px;
+border-radius:30px;
+height:100%;
+border:1px solid rgba(255,255,255,0.06);
+}
+
+.hours-item{
+display:flex;
+justify-content:space-between;
+padding:16px 0;
+border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+/* ====================== */
+/* ROUTE */
+/* ====================== */
+
+.route-box{
+margin-top:40px;
+background:linear-gradient(145deg,#121212,#1a1a1a);
+padding:40px;
+border-radius:35px;
+border:1px solid rgba(255,255,255,0.06);
+overflow:hidden;
+}
+
+.route-circle{
+width:85px;
+height:85px;
+border-radius:50%;
+background:linear-gradient(135deg,#d8a067,#ffe0b2);
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:2rem;
+color:black;
+font-weight:900;
+}
+
+.route-center{
+flex:1;
+padding:0 20px;
+min-width:300px;
+}
+
+.route-progress{
+position:relative;
+height:14px;
+background:#262626;
+border-radius:50px;
+overflow:hidden;
+margin-bottom:25px;
+}
+
+.route-progress-bar{
+position:absolute;
+left:0;
+top:0;
+height:100%;
+width:78%;
+background:linear-gradient(90deg,#d8a067,#ffe0b2);
+border-radius:50px;
+animation:routeMove 5s infinite alternate;
+}
+
+.route-car{
+position:absolute;
+left:75%;
+top:50%;
+transform:translate(-50%,-50%);
+width:48px;
+height:48px;
+border-radius:50%;
+background:linear-gradient(135deg,#d8a067,#ffe0b2);
+display:flex;
+justify-content:center;
+align-items:center;
+color:black;
+font-size:1.2rem;
+box-shadow:0 10px 25px rgba(216,160,103,0.4);
+animation:carMove 5s infinite alternate;
+}
+
+.route-stats{
+display:flex;
+justify-content:space-between;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.stat-item{
+background:#181818;
+padding:18px 22px;
+border-radius:20px;
+text-align:center;
+flex:1;
+min-width:120px;
+}
+
+.stat-item span{
+display:block;
+font-size:1.3rem;
+font-weight:800;
+color:#f5c28a;
+margin-bottom:4px;
+}
+
+.stat-item small{
+color:#9e9e9e;
+}
+
+@keyframes routeMove{
+
+0%{
+width:55%;
+}
+
+100%{
+width:86%;
+}
+
+}
+
+@keyframes carMove{
+
+0%{
+left:52%;
+}
+
+100%{
+left:84%;
+}
+
+}
+
+/* ====================== */
+/* FOOTER */
+/* ====================== */
+
+footer{
+padding:90px 0 40px;
+background:black;
+}
+
+.social a{
+width:55px;
+height:55px;
+border-radius:50%;
+display:inline-flex;
+justify-content:center;
+align-items:center;
+background:#1b1b1b;
+color:white;
+margin-right:12px;
+text-decoration:none;
+transition:0.3s;
+}
+
+.social a:hover{
+background:#d8a067;
+transform:translateY(-5px);
+}
+
+/* ====================== */
+/* POPUP */
+/* ====================== */
+
+.custom-modal{
+border:none;
+border-radius:40px;
+overflow:hidden;
+background:#111;
+}
+
+.popup-left{
+min-height:780px;
+background:
+linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.45)),
+url('https://lh3.googleusercontent.com/p/AF1QipOYww7SqqGGx4sg-ArsUBRRcxrYV-tKyF5b5AI4=s1360-w1360-h1020-rw');
+
+background-size:cover;
+background-position:center;
+}
+
+.popup-right{
+padding:70px;
+position:relative;
+}
+
+.badge-popup{
+display:inline-block;
+padding:10px 24px;
+border-radius:50px;
+background:linear-gradient(135deg,#d8a067,#ffcf97);
+color:black;
+font-weight:800;
+margin-bottom:25px;
+}
+
+.feature-box{
+background:#181818;
+padding:24px;
+border-radius:25px;
+display:flex;
+gap:20px;
+align-items:center;
+margin-top:20px;
+}
+
+.feature-icon{
+min-width:70px;
+height:70px;
+border-radius:20px;
+background:linear-gradient(135deg,#d8a067,#ffcf97);
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:1.5rem;
+color:black;
+}
+
+/* ====================== */
+/* RESPONSIVE */
+/* ====================== */
+
+@media(max-width:991px){
+
+.hero h1{
+font-size:3rem;
+}
+
+.section-title h2{
+font-size:2.3rem;
+}
+
+.popup-right{
+padding:40px 25px;
+}
+
+.review-card{
+width:300px;
+}
+
+.route-center{
+padding:25px 0;
+}
+
+}
+/* ================================= */
+/* AVIS INFINIS */
+/* ================================= */
+
+.reviews-slider{
+  overflow:hidden;
+  position:relative;
+  width:100%;
+  padding:20px 0;
+}
+
+.reviews-track{
+  display:flex;
+  width:max-content;
+  animation:scrollReviews 45s linear infinite;
+}
+
+.reviews-track:hover{
+  animation-play-state:paused;
+}
+
+.review-card{
+  width:380px;
+  min-width:380px;
+  margin-right:25px;
+
+  background:linear-gradient(145deg,#1b1b1b,#111);
+  border:1px solid #2a2a2a;
+
+  border-radius:30px;
+  padding:35px;
+
+  box-shadow:
+  0 10px 40px rgba(0,0,0,0.45);
+
+  transition:0.4s;
+}
+
+.review-card:hover{
+  transform:translateY(-8px);
+  border-color:#ffb347;
+}
+
+.review-top{
+  display:flex;
+  align-items:center;
+  gap:15px;
+  margin-bottom:20px;
+}
+
+.review-top img{
+  width:65px;
+  height:65px;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid #ffb347;
+}
+
+.review-name{
+  font-weight:700;
+  font-size:1.1rem;
+}
+
+.review-date{
+  color:#9d9d9d;
+  font-size:0.9rem;
+}
+
+.review-stars{
+  color:#ffb347;
+  margin-bottom:18px;
+  font-size:1rem;
+}
+
+.review-text{
+  color:#d5d5d5;
+  line-height:1.8;
+  font-size:0.97rem;
+}
+
+@keyframes scrollReviews{
+
+  0%{
+    transform:translateX(0);
+  }
+
+  100%{
+    transform:translateX(-50%);
+  }
+
+}
+
+@media(max-width:768px){
+
+  .review-card{
+    width:310px;
+    min-width:310px;
+  }
+
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg fixed-top">
+
+<div class="container">
+
+<a class="navbar-brand" href="#">
+🥐 LES ARTISTES
+</a>
+
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="nav">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="#creation">Créations</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#gallery">Galerie</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#reviews">Avis</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#contact">Contact</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-slider">
+
+<div class="hero-slide"></div>
+<div class="hero-slide"></div>
+<div class="hero-slide"></div>
+
+</div>
+
+<div class="container">
+
+<span class="text-warning fw-bold">
+Boulangerie artisanale • Lyon 7
+</span>
+
+<h1>
+Les Artistes
+</h1>
+
+<p>
+Une expérience artisanale moderne.
+Viennoiseries maison, pains artisanaux,
+créations gourmandes et ambiance chaleureuse
+au cœur de Lyon.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#creation" class="btn-gold">
+Découvrir
+</a>
+
+<a href="#gallery" class="btn-glass">
+Voir les photos
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CREATIONS -->
+
+<section id="creation">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+Créations Signature
+</h2>
+
+<p>
+Les spécialités artisanales de la boulangerie
+</p>
+
+</div>
+
+<div class="row g-4">
+
+<div class="col-lg-4">
+
+<div class="card-lux">
+
+<img src="https://img05.restaurantguru.com/rcef-Boulangerie-Les-Artistes-Chevreul-dishes.jpg">
+
+<div class="card-content">
+
+<h4>
+🍰 Cakes & créations
+</h4>
+
+<p class="text-secondary">
+Desserts maison et créations gourmandes artisanales.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-4">
+
+<div class="card-lux">
+
+<img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAEHBCc1807-kOMDCKWtFvxSUQ9D7LDyFKEK0_31PeVz7DyjFfVH5i3dDdY4P3AVLq8Cc2KuFsCyjSSsJKWNHWP9MbJHCPafw2FaDFmKj9-ZROS6J48Gl6pq2XtpChIJqG0J3t3iPE5QUfcI=s1360-w1360-h1020-rw">
+
+<div class="card-content">
+
+<h4>
+☕ Café & viennoiseries
+</h4>
+
+<p class="text-secondary">
+Pause gourmande avec café et viennoiseries artisanales.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-4">
+
+<div class="card-lux">
+
+<img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFJq7SDDxamH4pidCM6vsdjhcW2T5mBr_Dz2poOjjcx1k6fw7j8lUHIwErkg_k3woNOUUOo0VnLGIPxfilEO1LqT4DWZOUK63xmUjQLCexI70m7u5__GTyWYDNKT8i_ihsaUUF4YQ=s1360-w1360-h1020-rw">
+
+<div class="card-content">
+
+<h4>
+🥖 Les pains artisanaux
+</h4>
+
+<p class="text-secondary">
+Pain d’épices, ciabatta, pains spéciaux et créations maison.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section id="gallery">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+Galerie immersive
+</h2>
+
+<p>
+Découvrez l’univers de la boulangerie
+</p>
+
+</div>
+
+<div class="row g-4 gallery">
+
+<div class="col-lg-4">
+<img src="https://lh3.googleusercontent.com/p/AF1QipOYww7SqqGGx4sg-ArsUBRRcxrYV-tKyF5b5AI4=s1360-w1360-h1020-rw">
+</div>
+
+<div class="col-lg-4">
+<img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAEsrPQcfo7lb8eoSIG42wnO3n5PjM8bb_VeDVamKrBcCEjodQ7eQcyCdXh8Oeo_ucIHdp6gUINcUOqvrwrrcd0Yb7RR6bZ_vzag8PlErReQkrcU_Bw-rpkjbZEWCYXbpFIxD_x7eg=s1360-w1360-h1020-rw">
+</div>
+
+<div class="col-lg-4">
+<img src="https://img05.restaurantguru.com/rcef-Boulangerie-Les-Artistes-Chevreul-dishes.jpg">
+</div>
+
+<div class="col-lg-4">
+<img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFJq7SDDxamH4pidCM6vsdjhcW2T5mBr_Dz2poOjjcx1k6fw7j8lUHIwErkg_k3woNOUUOo0VnLGIPxfilEO1LqT4DWZOUK63xmUjQLCexI70m7u5__GTyWYDNKT8i_ihsaUUF4YQ=s1360-w1360-h1020-rw">
+</div>
+
+<div class="col-lg-4">
+<img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAEHBCc1807-kOMDCKWtFvxSUQ9D7LDyFKEK0_31PeVz7DyjFfVH5i3dDdY4P3AVLq8Cc2KuFsCyjSSsJKWNHWP9MbJHCPafw2FaDFmKj9-ZROS6J48Gl6pq2XtpChIJqG0J3t3iPE5QUfcI=s1360-w1360-h1020-rw">
+</div>
+
+<div class="col-lg-4">
+<img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAExTr1kOBJB9JyBU5dsOQJGf-HOrsd7qgXi4atUWq2GQ49KrHI80HN6fVrg2YvGU1NPH4uIdbHWylfa_LdDI8acabxN57IAbEeJayWEmQVYIZp_D4Ulv4nXWpPlu_EAyHJcNZ9lxjkxYh4=s1360-w1360-h1020-rw">
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================================= -->
+<!-- AVIS INFINIS -->
+<!-- ================================= -->
+
+<section class="py-5 bg-black" id="reviews">
+
+<div class="container py-5">
+
+<div class="section-title text-center mb-5">
+
+<span class="badge bg-warning text-dark px-4 py-2 rounded-pill mb-3">
+Google Reviews
+</span>
+
+<h2 class="fw-bold display-5">
+Ce que pensent nos clients
+</h2>
+
+<p class="text-secondary">
+Des centaines de clients satisfaits chaque semaine
+</p>
+
+</div>
+
+<div class="reviews-slider">
+
+<div class="reviews-track">
+
+<!-- AVIS 1 -->
+
+<div class="review-card">
+
+<div class="review-top">
+
+<img src="https://randomuser.me/api/portraits/women/44.jpg">
+
+<div>
+<div class="review-name">
+Karine Coupsdefood
+</div>
+
+<div class="review-date">
+Google Avis • il y a 10 mois
+</div>
+</div>
+
+</div>
+
+<div class="review-stars">
+★★★★★
+</div>
+
+<div class="review-text">
+Adresse incontournable à Lyon. Les viennoiseries sont incroyables et l’odeur qui sort de la boulangerie donne envie d’acheter toute la boutique.
+</div>
+
+</div>
+
+<!-- AVIS 2 -->
+
+<div class="review-card">
+
+<div class="review-top">
+
+<img src="https://randomuser.me/api/portraits/men/32.jpg">
+
+<div>
+<div class="review-name">
+Folco C
+</div>
+
+<div class="review-date">
+Google Avis • il y a 2 mois
+</div>
+</div>
+
+</div>
+
+<div class="review-stars">
+★★★★★
+</div>
+
+<div class="review-text">
+Je n’ai toujours pas compris comment ils arrivent à faire des produits aussi bons tous les jours. Mention spéciale au pain et aux brownies.
+</div>
+
+</div>
+
+<!-- AVIS 3 -->
+
+<div class="review-card">
+
+<div class="review-top">
+
+<img src="https://randomuser.me/api/portraits/women/68.jpg">
+
+<div>
+<div class="review-name">
+Biba40000
+</div>
+
+<div class="review-date">
+Google Avis • il y a 2 mois
+</div>
+</div>
+
+</div>
+
+<div class="review-stars">
+★★★★☆
+</div>
+
+<div class="review-text">
+Très belles créations et produits frais. Beaucoup de choix même si ça part très vite aux heures de pointe.
+</div>
+
+</div>
+
+<!-- AVIS 4 -->
+
+<div class="review-card">
+
+<div class="review-top">
+
+<img src="https://randomuser.me/api/portraits/men/11.jpg">
+
+<div>
+<div class="review-name">
+Special Oud 69
+</div>
+
+<div class="review-date">
+Google Avis • il y a 4 mois
+</div>
+</div>
+
+</div>
+
+<div class="review-stars">
+★★★★★
+</div>
+
+<div class="review-text">
+Pain d’épices exceptionnel, brownie noix de pécan ultra fondant et ciabatta incroyable. Une vraie boulangerie artisanale.
+</div>
+
+</div>
+
+<!-- AVIS 5 -->
+
+<div class="review-card">
+
+<div class="review-top">
+
+<img src="https://randomuser.me/api/portraits/women/20.jpg">
+
+<div>
+<div class="review-name">
+Margaux Peron
+</div>
+
+<div class="review-date">
+Google Avis • il y a 6 mois
+</div>
+</div>
+
+</div>
+
+<div class="review-stars">
+★★★☆☆
+</div>
+
+<div class="review-text">
+Très bon cinnamon roll mais victime de son succès. Il faut venir tôt pour avoir encore du choix.
+</div>
+
+</div>
+
+<!-- DUPLICATION POUR INFINI -->
+
+<div class="review-card">
+
+<div class="review-top">
+
+<img src="https://randomuser.me/api/portraits/women/44.jpg">
+
+<div>
+<div class="review-name">
+Karine Coupsdefood
+</div>
+
+<div class="review-date">
+Google Avis • il y a 10 mois
+</div>
+</div>
+
+</div>
+
+<div class="review-stars">
+★★★★★
+</div>
+
+<div class="review-text">
+Adresse incontournable à Lyon. Les viennoiseries sont incroyables et l’odeur qui sort de la boulangerie donne envie d’acheter toute la boutique.
+</div>
+
+</div>
+
+<div class="review-card">
+
+<div class="review-top">
+
+<img src="https://randomuser.me/api/portraits/men/32.jpg">
+
+<div>
+<div class="review-name">
+Folco C
+</div>
+
+<div class="review-date">
+Google Avis • il y a 2 mois
+</div>
+</div>
+
+</div>
+
+<div class="review-stars">
+★★★★★
+</div>
+
+<div class="review-text">
+Je n’ai toujours pas compris comment ils arrivent à faire des produits aussi bons tous les jours. Mention spéciale au pain et aux brownies.
+</div>
+
+</div>
+
+<div class="review-card">
+
+<div class="review-top">
+
+<img src="https://randomuser.me/api/portraits/women/68.jpg">
+
+<div>
+<div class="review-name">
+Biba40000
+</div>
+
+<div class="review-date">
+Google Avis • il y a 2 mois
+</div>
+</div>
+
+</div>
+
+<div class="review-stars">
+★★★★☆
+</div>
+
+<div class="review-text">
+Très belles créations et produits frais. Beaucoup de choix même si ça part très vite aux heures de pointe.
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+Nous trouver
+</h2>
+
+<p>
+26 Rue Chevreul • Lyon 7
+</p>
+
+</div>
+
+<div class="map-wrapper">
+
+<div class="row g-4">
+
+<div class="col-lg-8">
+
+<div class="map-box">
+
+<iframe
+src="https://www.google.com/maps?q=26+Rue+Chevreul+69007+Lyon&output=embed"
+width="100%"
+height="550"
+style="border:0;">
+</iframe>
+
+</div>
+
+</div>
+
+<div class="col-lg-4">
+
+<div class="hours-box">
+
+<h3 class="fw-bold mb-4">
+Horaires
+</h3>
+
+<div class="hours-item">
+<span>Lundi</span>
+<span>07h — 19h</span>
+</div>
+
+<div class="hours-item">
+<span>Mardi</span>
+<span>07h — 19h</span>
+</div>
+
+<div class="hours-item">
+<span>Mercredi</span>
+<span>07h — 19h</span>
+</div>
+
+<div class="hours-item">
+<span>Jeudi</span>
+<span>07h — 19h</span>
+</div>
+
+<div class="hours-item">
+<span>Vendredi</span>
+<span>À vérifier</span>
+</div>
+
+<div class="hours-item">
+<span>Samedi</span>
+<span>Fermé</span>
+</div>
+
+<div class="hours-item border-0">
+<span>Dimanche</span>
+<span>Fermé</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- REMPLACE TOUT LE BLOC ROUTE-BOX PAR CELUI-CI -->
+
+<div class="route-box">
+
+<h3 class="fw-bold mb-5">
+📍 Itinéraire intelligent en direct
+</h3>
+
+<div class="d-flex justify-content-between align-items-center flex-wrap gap-4">
+
+<!-- POSITION CLIENT -->
+
+<div class="d-flex align-items-center gap-3">
+
+<div class="route-circle">
+<i class="bi bi-geo-alt-fill"></i>
+</div>
+
+<div>
+
+<h5 class="fw-bold mb-1">
+Votre position
+</h5>
+
+<span class="text-secondary" id="userLocation">
+Autorisation GPS en attente...
+</span>
+
+</div>
+
+</div>
+
+<!-- CENTRE -->
+
+<div class="route-center">
+
+<div class="route-progress">
+
+<div class="route-progress-bar" id="routeBar"></div>
+
+<div class="route-car" id="routeCar">
+<i class="bi bi-car-front-fill"></i>
+	</div>
+
+</div>
+
+<div class="route-stats">
+
+<div class="stat-item">
+<span id="distanceValue">-- km</span>
+<small>Distance réelle</small>
+</div>
+
+<div class="stat-item">
+<span id="timeValue">-- min</span>
+<small>Temps estimé</small>
+</div>
+
+<div class="stat-item">
+<span id="peopleCounter">En direct</span>
+<small>Affluence</small>
+</div>
+
+</div>
+
+</div>
+
+<!-- BOULANGERIE -->
+
+<div class="d-flex align-items-center gap-3">
+
+<div>
+
+<h5 class="fw-bold mb-1 text-end">
+Les Artistes
+</h5>
+
+<span class="text-secondary">
+26 Rue Chevreul • Lyon
+</span>
+
+</div>
+
+<div class="route-circle">
+<i class="bi bi-shop"></i>
+</div>
+
+</div>
+
+</div>
+
+<!-- STATUS -->
+
+<div class="mt-5">
+
+<div class="alert alert-dark border border-secondary rounded-4 p-4">
+
+<div class="d-flex align-items-center gap-3 flex-wrap">
+
+<div class="route-circle" style="width:65px;height:65px;font-size:1.3rem;">
+<i class="bi bi-lightning-charge-fill"></i>
+</div>
+
+<div>
+
+<h5 class="fw-bold mb-1">
+Analyse intelligente du trajet
+</h5>
+
+<p class="text-secondary mb-0" id="smartStatus">
+
+Autorisez la localisation pour calculer votre vraie distance automatiquement.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container">
+
+<div class="row g-5">
+
+<div class="col-lg-4">
+
+<h3 class="fw-bold mb-4">
+🥐 LES ARTISTES
+</h3>
+
+<p class="text-secondary">
+Boulangerie artisanale à Lyon.
+</p>
+
+<div class="social mt-4">
+
+<a href="#">
+<i class="bi bi-instagram"></i>
+</a>
+
+<a href="#">
+<i class="bi bi-facebook"></i>
+</a>
+
+<a href="#">
+<i class="bi bi-google"></i>
+</a>
+
+</div>
+
+</div>
+
+<div class="col-lg-4">
+
+<h4 class="fw-bold mb-4">
+Contact
+</h4>
+
+<p class="text-secondary">
+📍 26 Rue Chevreul, 69007 Lyon
+</p>
+
+<p class="text-secondary">
+📞 09 86 33 88 93
+</p>
+
+<p class="text-secondary">
+✉️ contact@boulangerie-les-artistes.fr
+</p>
+
+</div>
+
+<div class="col-lg-4">
+
+<h4 class="fw-bold mb-4">
+T&A Digital Management
+</h4>
+
+<p class="text-secondary">
+Maquette immersive moderne réalisée pour une expérience digitale élégante et fluide.
+</p>
+
+</div>
+
+</div>
+
+<hr class="border-secondary my-5">
+
+<div class="text-center text-secondary">
+© 2026 — Les Artistes • T&A Digital Management
+</div>
+
+</div>
+
+</footer>
+
+<!-- POPUP -->
+
+<div class="modal fade" id="popupSite">
+
+<div class="modal-dialog modal-dialog-centered modal-xl">
+
+<div class="modal-content custom-modal">
+
+<div class="row g-0">
+
+<div class="col-lg-5 d-none d-lg-block">
+
+<div class="popup-left"></div>
+
+</div>
+
+<div class="col-lg-7">
+
+<div class="popup-right">
+
+<button
+class="btn-close btn-close-white position-absolute top-0 end-0 m-4"
+data-bs-dismiss="modal">
+</button>
+
+<span class="badge-popup">
+T&A DIGITAL MANAGEMENT
+</span>
+
+<h2 class="fw-bold display-5 mb-4">
+Maquette immersive moderne
+</h2>
+
+<p class="text-light-emphasis lh-lg">
+
+Cette maquette est entièrement personnalisable selon vos goûts et votre identité.
+
+<br><br>
+
+Couleurs, animations, sections, galerie, menus, avis, effets modernes ou encore fonctionnalités peuvent être modifiés.
+
+<br><br>
+
+Un petit retour via le mail que vous avez reçu si vous êtes intéressé vous aurez mon numéro afin d’échanger plus facilement sur votre projet.
+
+</p>
+
+<div class="feature-box">
+
+<div class="feature-icon">
+<i class="bi bi-stars"></i>
+</div>
+
+<div>
+
+<h5 class="fw-bold">
+Expérience moderne
+</h5>
+
+<p class="text-secondary">
+Animations fluides et interface immersive.
+</p>
+
+</div>
+
+</div>
+
+<div class="feature-box">
+
+<div class="feature-icon">
+<i class="bi bi-phone"></i>
+</div>
+
+<div>
+
+<h5 class="fw-bold">
+100% responsive
+</h5>
+
+<p class="text-secondary">
+Compatible téléphone, tablette et ordinateur.
+</p>
+
+</div>
+
+</div>
+
+<div class="mt-5">
+
+<button
+class="btn-gold"
+onclick="closePopup()">
+
+Découvrir le site
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+/* POPUP */
+
+window.addEventListener('load',()=>{
+
+const popup = new bootstrap.Modal(
+document.getElementById('popupSite')
+);
+
+popup.show();
+
+});
+
+/* CLOSE POPUP */
+
+function closePopup(){
+
+const modalEl = document.getElementById('popupSite');
+
+const modal = bootstrap.Modal.getInstance(modalEl);
+
+modal.hide();
+
+setTimeout(()=>{
+
+document.getElementById('creation')
+.scrollIntoView({
+behavior:'smooth'
+});
+
+},400);
+
+}
+
+/* CLIENT COUNTER */
+
+let counter = document.getElementById('peopleCounter');
+
+let people = 28;
+
+setInterval(()=>{
+
+let random = Math.floor(Math.random()*5)-2;
+
+people += random;
+
+if(people < 18){
+people = 18;
+}
+
+if(people > 46){
+people = 46;
+}
+
+counter.innerHTML = people;
+
+},3000);
+
+
+
+/* ========================= */
+/* GOOGLE MAPS REAL ROUTE */
+/* ========================= */
+
+const bakeryAddress =
+"26 Rue Chevreul, 69007 Lyon, France";
+
+const bakeryLat = 45.747246;
+const bakeryLng = 4.842257;
+
+const distanceValue =
+document.getElementById("distanceValue");
+
+const timeValue =
+document.getElementById("timeValue");
+
+const userLocation =
+document.getElementById("userLocation");
+
+const smartStatus =
+document.getElementById("smartStatus");
+
+const peopleCounter =
+document.getElementById("peopleCounter");
+
+const routeBar =
+document.getElementById("routeBar");
+
+const routeCar =
+document.getElementById("routeCar");
+
+/* ========================= */
+/* GEOLOCATION */
+/* ========================= */
+
+if(navigator.geolocation){
+
+navigator.geolocation.getCurrentPosition(
+
+(position)=>{
+
+const userLat =
+position.coords.latitude;
+
+const userLng =
+position.coords.longitude;
+
+/* GOOGLE MAPS URL */
+
+const mapsURL =
+`https://www.google.com/maps/dir/${userLat},${userLng}/${bakeryLat},${bakeryLng}`;
+
+/* FETCH GOOGLE ROUTE */
+
+fetch(
+`https://router.project-osrm.org/route/v1/driving/${userLng},${userLat};${bakeryLng},${bakeryLat}?overview=false`
+)
+
+.then(res => res.json())
+
+.then(data=>{
+
+const route =
+data.routes[0];
+
+/* DISTANCE */
+
+const km =
+(route.distance / 1000).toFixed(1);
+
+distanceValue.innerHTML =
+km + " km";
+
+/* TEMPS */
+
+const minutes =
+Math.round(route.duration / 60);
+
+if(minutes >= 60){
+
+const h =
+Math.floor(minutes / 60);
+
+const m =
+minutes % 60;
+
+timeValue.innerHTML =
+`${h}h ${m}min`;
+
+}else{
+
+timeValue.innerHTML =
+minutes + " min";
+
+}
+
+/* STATUS */
+
+userLocation.innerHTML =
+"GPS détecté automatiquement";
+
+smartStatus.innerHTML =
+"Trajet voiture calculé en temps réel.";
+
+/* BAR */
+
+let progress = 90;
+
+if(km > 5) progress = 75;
+if(km > 20) progress = 55;
+if(km > 50) progress = 35;
+if(km > 100) progress = 15;
+
+routeBar.style.width =
+progress + "%";
+
+routeCar.style.left =
+(progress - 2) + "%";
+
+/* AFFLUENCE RANDOM RÉALISTE */
+
+const clients =
+Math.floor(Math.random()*18)+7;
+
+peopleCounter.innerHTML =
+clients + " clients";
+
+})
+
+.catch(()=>{
+
+smartStatus.innerHTML =
+"Erreur calcul itinéraire.";
+
+});
+
+/* BOUTON GOOGLE MAPS */
+
+document.getElementById("openRoute")
+.href = mapsURL;
+
+},
+
+()=>{
+
+userLocation.innerHTML =
+"Localisation refusée";
+
+smartStatus.innerHTML =
+"Impossible d'accéder au GPS.";
+
+}
+
+);
+
+}
+
+</script>
+</body>
+</html>

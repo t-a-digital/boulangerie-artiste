@@ -695,6 +695,26 @@ padding:25px 0;
   }
 
 }
+	.logo-navbar{
+width:58px;
+height:58px;
+border-radius:50%;
+object-fit:cover;
+border:2px solid rgba(255,255,255,0.15);
+box-shadow:0 10px 25px rgba(0,0,0,0.35);
+transition:0.4s;
+}
+
+.logo-navbar:hover{
+transform:scale(1.08);
+}
+
+.navbar-brand span{
+font-size:1.9rem;
+font-weight:900;
+letter-spacing:1px;
+color:#f5c28a;
+}
 </style>
 
 </head>
@@ -707,8 +727,17 @@ padding:25px 0;
 
 <div class="container">
 
-<a class="navbar-brand" href="#">
-🥐 LES ARTISTES
+<a class="navbar-brand d-flex align-items-center gap-3" href="#">
+
+<img
+src="https://image.noelshack.com/fichiers/2026/19/6/1778328679-249868043-3075780869364803-9201196144395613618-n.jpg"
+alt="Les Artistes Logo"
+class="logo-navbar">
+
+<span>
+LES ARTISTES
+</span>
+
 </a>
 
 <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
@@ -1424,9 +1453,17 @@ Autorisez la localisation pour calculer votre vraie distance automatiquement.
 
 <div class="col-lg-4">
 
-<h3 class="fw-bold mb-4">
-🥐 LES ARTISTES
+<div class="d-flex align-items-center gap-3 mb-4">
+
+<img
+src="https://image.noelshack.com/fichiers/2026/19/6/1778328679-249868043-3075780869364803-9201196144395613618-n.jpg"
+class="logo-navbar">
+
+<h3 class="fw-bold m-0">
+LES ARTISTES
 </h3>
+
+</div>
 
 <p class="text-secondary">
 Boulangerie artisanale à Lyon.
